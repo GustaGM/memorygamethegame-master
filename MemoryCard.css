@@ -15,6 +15,7 @@ body{
 
     display: flex;
     flex-wrap: wrap;
+    
     perspective: 1000px;
 
     border: 2px lime solid;
@@ -36,7 +37,6 @@ body{
 }
 .memory-card.flip{
     transform: rotateY(180deg);
-
 }
 
 
@@ -49,4 +49,9 @@ body{
 
     background: coral;
     border-radius: 2px;
+
+    backface-visibility: hidden;
+}
+.front-face{
+    transform: rotateY(180deg);
 }

@@ -3,7 +3,12 @@ let cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
 let firstCard, secondCard;
+let lockboard = false;
+
+
 function flipCard(){
+    if(lockboard) return;
+    if(this === firstCard) return;
     //toggle = se a classe estiver lá, remova-a. Se não estiver, coloque-a
     this.classList.toggle('flip');
 
@@ -15,21 +20,45 @@ function flipCard(){
     //segundo clique
     else{        
         hasFlippedCard = false;
-        secondCard = this;    
-    
-    //os cards são iguais?
-        if(firstCard.dataset.framework === secondCard.dataset.framework){
-            firstCard.removeEventListener('click', flipCard);
-            secondCard.removeEventListener('click', flipCard);
-        }else{
-            setTimeout(() => {
-                firstCard.classList.toggle('flip');
-                secondCard.classList.toggle('flip');
-            }, 1000);        
-        }
+        secondCard = this; 
+
+        CheckCards();
     }
-    console.log("ta funcionando o caraiiii");
 } 
+  
+//os cards são iguais?
+function CheckCards(){      
+    if(firstCard.dataset.framework === secondCard.dataset.framework){
+        DisableCards();
+    }else{
+        UnflipCards();
+    }
+}
+
+function DisableCards(){
+    firstCard.removeEventListener('click', flipCard);
+    secondCard.removeEventListener('click', flipCard);
+}
+
+function UnflipCards(){
+    lockboard = true;
+
+    setTimeout(() => {
+        firstCard.classList.toggle('flip');
+        secondCard.classList.toggle('flip');
+        lockboard = false;
+    }, 1000);    
+}
+
+//função executada logo após sua definição "(funcion(){})()"
+(function Shuffle(){
+    cards.forEach(card =>{
+        let randomPos = Math.floor(Math.random() * 10);
+        card.style.order = randomPos;
+    })
+
+})()
+
 
 //para cada um dos cards na lista, criamos um "event listener", que cada vez que o evento 'click' for chamado ele irá executar uma função
 cards.forEach(card => card.addEventListener('click',flipCard))

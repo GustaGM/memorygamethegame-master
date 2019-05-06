@@ -1,0 +1,18 @@
+*{
+    text-align: center;
+}
+body{
+    background-color: blueviolet;
+}
+img{
+    width: 300px;
+}
+.memory-game{
+    border: 2px maroon solid;
+    display: flex;
+}
+.memory-card{
+    position: relative;
+    border: 2px black solid;
+
+}

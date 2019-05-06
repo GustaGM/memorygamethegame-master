@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="MemoryCard.css">
         <title>Memory Game</title>
         <meta charset="utf-8" />
     </head>
 
-    <style>
-    *{
-        text-align: center;
-    }
-    </style>
 
     <body>
         <h1>MEMORY GAME THE GAME</h1>
@@ -19,12 +14,37 @@
 
         <input type="number" id="cardsN" onkeydown="cardNConfirm(event)" >
 
-        <script>
-            let cards = [];            
+        <section class="memory-game">
+            <div class="memory-card">
+                <img class="front-face" src="https://i.imgur.com/i43kgZA.png" alt="Card">
+                <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
+            </div>
 
-            function cardNConfirm(event){
-                console.log(event.keycode);
-            }        
-        </script>    
+            <div class="memory-card">
+                <img class="front-face" src="https://i.imgur.com/i43kgZA.png" alt="Card">
+                <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
+            </div>
+
+            <div class="memory-card">
+                <img class="front-face" src="https://i.imgur.com/zqbt3OA.png" alt="Card">
+                <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
+            </div>
+
+            <div class="memory-card">
+                <img class="front-face" src="https://i.imgur.com/zqbt3OA.png" alt="Card">
+                <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
+            </div>
+
+            <div class="memory-card">
+                <img class="front-face" src="https://i.imgur.com/18knrPr.png" alt="Card">
+                <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
+            </div>
+
+            <div class="memory-card">
+                <img class="front-face" src="https://i.imgur.com/18knrPr.png" alt="Card">
+                <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
+            </div>
+        </section>      
+        <script src="Script.js"></script>    
     </body>
 </html>

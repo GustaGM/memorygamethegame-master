@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="">
+        <title>Memory Game</title>
+        <meta charset="utf-8" />
+    </head>
+
+    <style>
+    *{
+        text-align: center;
+    }
+    </style>
+
+    <body>
+        <h1>MEMORY GAME THE GAME</h1>
+
+        <h2>Insert the number of cards!</h2>
+
+        <input type="number" id="cardsN" onkeydown="cardNConfirm(event)" >
+
+        <script>
+            let cards = [];            
+
+            function cardNConfirm(event){
+                console.log(event.keycode);
+            }        
+        </script>    
+    </body>
+</html>

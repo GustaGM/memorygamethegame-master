@@ -50,14 +50,31 @@ function UnflipCards(){
     }, 1000);    
 }
 
+
 //função executada logo após sua definição "(funcion(){})()"
-(function Shuffle(){
+function Shuffle(){
     cards.forEach(card =>{
         let randomPos = Math.floor(Math.random() * 10);
         card.style.order = randomPos;
     })
 
-})()
+}
+
+function CreateCards(){
+    var newCard;
+    var cardsN = document.getElementById("cardsN").value;
+    
+    for(var i=0; i < cardsN; i++){
+        newCard +=         
+        '<div class="memory-card" data-framework="'+i+'"><img class="front-face" src="imagens/img'+i+'.png" alt="Card"><img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card"></div>'
+        '<div class="memory-card" data-framework="'+i+'"><img class="front-face" src="imagens/img'+i+'.png" alt="Card"><img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card"></div>';
+        
+       
+        document.querySelector(".memory-game").innerHTML += newCard;       
+
+        console.log("cleiton");
+    }    
+}
 
 
 //para cada um dos cards na lista, criamos um "event listener", que cada vez que o evento 'click' for chamado ele irá executar uma função

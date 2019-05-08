@@ -8,13 +8,18 @@
 
 
     <body>
-        <h1>MEMORY GAME THE GAME</h1>
+        <div class="updisplay">
+            <h1>MEMORY GAME THE GAME</h1>
+            <h2>Insira o número de pares!</h2>
+            <input class="input" type="number" id="cardsN" onkeydown="CreateCards()" >
+        </div>
 
-        <h2>Insert the number of cards!</h2>
 
-        <input class="input" type="number" id="cardsN" onkeydown="cardNConfirm(event)" >
+        <section class="memory-game">    
 
-        <section class="memory-game">
+        </section>      
+
+        <!--
             <div class="memory-card" data-framework="Valeera">
                 <img class="front-face" src="https://i.imgur.com/i43kgZA.png" alt="Card">
                 <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
@@ -52,11 +57,11 @@
             </div>
 
             <div class="memory-card" data-framework="Oi?">
-                <img class="front-face" src="https://www.wykop.pl/cdn/c3201142/comment_XcIvDbSl0iDWwAeZCE5ZE0y838pE6p1B,w400.jpg" alt="Card">
+                <img class="front-face" src="https://cdn.toucharcade.com/wp-content/uploads/2018/03/d1b346b23243f0c0dac9c729d78b64979d82469aa7d74a66fcba223fefb4db991-300x414.png" alt="Card">
                 <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
             </div>
             <div class="memory-card" data-framework="Oi?">
-                <img class="front-face" src="https://www.wykop.pl/cdn/c3201142/comment_XcIvDbSl0iDWwAeZCE5ZE0y838pE6p1B,w400.jpg" alt="Card">
+                <img class="front-face" src="https://cdn.toucharcade.com/wp-content/uploads/2018/03/d1b346b23243f0c0dac9c729d78b64979d82469aa7d74a66fcba223fefb4db991-300x414.png" alt="Card">
                 <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
             </div>
 
@@ -68,7 +73,7 @@
                 <img class="front-face" src="https://i.imgur.com/civfphZ.png" alt="Card">
                 <img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card">
             </div>
-        </section>      
+        -->
 
         <script src="Script.js"></script>    
         

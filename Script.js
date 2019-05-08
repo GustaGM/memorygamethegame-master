@@ -1,6 +1,3 @@
-//lista de todos os cards da classe "memory-card" colocadas em uma variável tipo let
-let cards = document.querySelectorAll('.memory-card');            
-
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockboard = false;
@@ -65,17 +62,21 @@ function CreateCards(){
     var cardsN = document.getElementById("cardsN").value;
     
     for(var i=0; i < cardsN; i++){
-        newCard +=         
-        '<div class="memory-card" data-framework="'+i+'"><img class="front-face" src="imagens/img'+i+'.png" alt="Card"><img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card"></div>'
+
+        newCard =         
         '<div class="memory-card" data-framework="'+i+'"><img class="front-face" src="imagens/img'+i+'.png" alt="Card"><img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card"></div>';
-        
-       
+        newCard +=
+        '<div class="memory-card" data-framework="'+i+'"><img class="front-face" src="imagens/img'+i+'.png" alt="Card"><img class="back-face" src="https://d1oxuuwezf1xh6.cloudfront.net/assets/editorial/2018/09/magni-verso.png" alt="Card"></div>';
+               
         document.querySelector(".memory-game").innerHTML += newCard;       
 
         console.log("cleiton");
-    }    
+    }   
+
+    //lista de todos os cards da classe "memory-card" colocadas em uma variável tipo let
+    let cards = document.querySelectorAll('.memory-card'); 
+
+    //para cada um dos cards na lista, criamos um "event listener", que cada vez que o evento 'click' for chamado ele irá executar uma função
+    cards.forEach(card => card.addEventListener('click',flipCard))
 }
 
-
-//para cada um dos cards na lista, criamos um "event listener", que cada vez que o evento 'click' for chamado ele irá executar uma função
-cards.forEach(card => card.addEventListener('click',flipCard))
